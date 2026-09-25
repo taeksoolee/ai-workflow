@@ -1,0 +1,26 @@
+# NOTE: example/ 은 aiw 실행 산출물을 커밋하지 않고 항상 깨끗한 상태를 유지한다.
+# (대상 프로젝트라면 .ai-workflow/ 의 SSoT 파일과 AI.md 는 커밋하는 것이 정상이지만,
+#  이 디렉터리는 테스트 실행장이므로 전부 제외한다.)
+.ai-workflow/
+AI.md
+
+# aiw setup / aiw mcp 파생 파일
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.cursorrules
+.windsurfrules
+.traerules
+.claude/
+.cursor/
+.kiro/
+.github/
+.opencode/
+.agents/
+.agent/
+.windsurf/
+.continue/
+.trae/
+.vscode/
+.mcp.json
+opencode.json

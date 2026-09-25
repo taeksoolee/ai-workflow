@@ -1,0 +1,36 @@
+{
+  "name": "@taeksoolee/ai-workflow",
+  "version": "0.1.0",
+  "description": "어떤 AI 에이전트 도구를 쓰든 동일한 워크플로우로 프로젝트를 진행하게 해주는 CLI (aiw)",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "aiw": "bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "presets",
+    "templates",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "example:init": "pnpm --dir example exec aiw init --yes",
+    "example:setup": "pnpm --dir example exec aiw setup --yes",
+    "example:mcp": "pnpm --dir example exec aiw mcp claude --dry-run",
+    "example:check": "pnpm --dir example exec aiw check"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "workflow",
+    "cli",
+    "mcp",
+    "claude",
+    "cursor"
+  ]
+}

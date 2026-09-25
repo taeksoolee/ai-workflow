@@ -1,0 +1,17 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  example:
+    devDependencies:
+      '@taeksoolee/ai-workflow':
+        specifier: workspace:*
+        version: link:..
+
+  manual: {}

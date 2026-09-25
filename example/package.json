@@ -1,0 +1,17 @@
+{
+  "name": "@taeksoolee/ai-workflow-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "aiw 배포 후 사용 흐름을 리포 안에서 테스트하는 샘플 프로젝트",
+  "scripts": {
+    "aiw:init": "aiw init --yes",
+    "aiw:setup": "aiw setup --yes",
+    "aiw:mcp": "aiw mcp claude --dry-run",
+    "aiw:check": "aiw check",
+    "aiw:gitignore-check": "aiw gitignore --check"
+  },
+  "devDependencies": {
+    "@taeksoolee/ai-workflow": "workspace:*"
+  }
+}
