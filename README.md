@@ -48,6 +48,17 @@ aiw check                 # 상태 점검
 [소개](./manual/docs/index.md) · [시작하기](./manual/docs/getting-started.md) ·
 [커맨드 레퍼런스](./manual/docs/commands.md) · [프로젝트 구조](./manual/docs/project-structure.md)
 
+## 개발 규칙
+
+- **기능 수정에 문서 수정이 필요하면 반드시 함께 수정한다.** 커맨드·동작·구조 설명의 정본은
+  `manual/docs/` 와 `templates/` 다 — 기능 변경이 이 문서들과 어긋나게 되면 같은 커밋(또는 같은 PR)에서
+  문서를 갱신한다. 문서가 낡은 채 남는 것은 기능 버그와 동급으로 취급한다.
+- 배포 전 `pnpm test` 가 게이트다 (`prepublishOnly`) — workspace 테스트(smoke)와 배포판 tarball
+  설치 테스트(pack)를 모두 통과해야 한다.
+- **배포는 수동으로만 한다** (`npm publish`, 2FA OTP 필요 — CI 자동 배포 없음).
+- **배포가 완료되면 반드시 배포된 커밋에 `v<버전>` git tag 를 남기고 push 한다** (`git tag v0.1.1 && git push --tags`).
+  어떤 커밋이 어떤 배포 버전인지는 tag 가 정본이다.
+
 ## 리포 구성 (개발자용)
 
 | 경로 | 역할 |

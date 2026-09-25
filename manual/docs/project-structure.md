@@ -38,7 +38,7 @@ AI.md                    # 루트 진입점 — 첫 줄에서 base.md 강제 참
 | --- | --- | --- |
 | `baseBranch` | `"main"` | 새 브랜치를 딸 베이스 (`origin/<baseBranch>`). base.md 렌더에 반영 |
 | `branchPrefixes` | feature, fix, hotfix, release, chore, refactor, docs, test | 허용 브랜치 prefix |
-| `commitFormat` | `"conventional"` | `feat:` 등 prefix 필수, 이슈키 없음 |
+| `commitFormat` | `"conventional"` | `feat:` 등 prefix 필수, 이슈키 없음. 다른 포맷이 필요하면 `AI.md` 에 명시해 오버라이드 |
 | `ignoreDerived` | `true` | 파생 파일을 gitignore 블록에 포함할지 |
 | `tools` | 전체 | `aiw setup all` / `aiw mcp all` 의 대상 도구 |
 
@@ -49,6 +49,10 @@ AI.md                    # 루트 진입점 — 첫 줄에서 base.md 강제 참
 모든 리포에서 참이고, 기계(훅/CI)가 강제하지 못하며, AI 가 실제로 틀리는 지점만 담은 공통 규칙 문서다.
 상단에 generated 헤더가 있고 **직접 수정하지 않는다** — `aiw setup` 이 패키지 템플릿과 비교해
 drift 를 감지하면 갱신한다. 프로젝트 고유 규칙은 `AI.md` 에 쓴다.
+
+**우선순위:** base.md 는 기본값이다. 루트 `AI.md` 가 충돌하는 규칙을 명시하면(예: 이슈키
+커밋 포맷을 쓰는 프로젝트) **`AI.md` 쪽이 우선한다.** base.md 를 고치는 게 아니라 `AI.md` 의
+해당 섹션에 프로젝트 규칙을 적는 방식으로 오버라이드한다.
 
 ## docs/*-guide.md — 스킬 선언 (SSoT)
 
