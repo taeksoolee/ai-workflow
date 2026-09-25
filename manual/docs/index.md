@@ -23,3 +23,4 @@ AI 에이전트 도구(Claude Code, Cursor, Kiro, Copilot, OpenCode, Codex, Wind
 - [시작하기](./getting-started.md) — 설치부터 첫 설정까지
 - [커맨드 레퍼런스](./commands.md) — 모든 커맨드와 옵션
 - [프로젝트 구조](./project-structure.md) — `.ai-workflow/` 안에 무엇이 있는지
+- [릴리즈 노트](./changelog.md) — 버전별 변경 내역

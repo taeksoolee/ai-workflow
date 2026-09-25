@@ -55,9 +55,13 @@ aiw check                 # 상태 점검
   문서를 갱신한다. 문서가 낡은 채 남는 것은 기능 버그와 동급으로 취급한다.
 - 배포 전 `pnpm test` 가 게이트다 (`prepublishOnly`) — workspace 테스트(smoke)와 배포판 tarball
   설치 테스트(pack)를 모두 통과해야 한다.
-- **배포는 수동으로만 한다** (`npm publish`, 2FA OTP 필요 — CI 자동 배포 없음).
-- **배포가 완료되면 반드시 배포된 커밋에 `v<버전>` git tag 를 남기고 push 한다** (`git tag v0.1.1 && git push --tags`).
-  어떤 커밋이 어떤 배포 버전인지는 tag 가 정본이다.
+- **배포 절차** (배포는 수동으로만 한다 — CI 자동 배포 없음):
+  1. 버전 bump (`npm version patch|minor --no-git-tag-version`)
+  2. **릴리즈 커밋** — 매뉴얼 릴리즈 노트(`manual/docs/changelog.md`)에 이 버전의 변경 내역을
+     기록해 버전 bump 와 함께 커밋한다. 배포 직전 마지막 커밋은 항상 이 릴리즈 커밋이다.
+  3. `npm publish` (2FA OTP 필요)
+  4. **배포가 완료되면 릴리즈 커밋에 `v<버전>` git tag 를 남기고 push 한다**
+     (`git tag v0.1.1 && git push --tags`). 어떤 커밋이 어떤 배포 버전인지는 tag 가 정본이다.
 
 ## 리포 구성 (개발자용)
 

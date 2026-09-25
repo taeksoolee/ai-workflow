@@ -20,6 +20,7 @@
 | `docs/getting-started.md` | 설치 → init → setup → mcp 흐름 |
 | `docs/commands.md` | 커맨드 레퍼런스 (정본 — 루트 README 는 요약만 둔다) |
 | `docs/project-structure.md` | 대상 프로젝트의 `.ai-workflow/` 구조 설명 |
+| `docs/changelog.md` | 릴리즈 노트 — 버전별 변경 내역 (배포 직전 릴리즈 커밋에서 갱신) |
 
 ## 추후 결정 필요
 
