@@ -1,0 +1,4 @@
+# NOTE: GitHub Pages 내장 Jekyll 빌드용 최소 설정. 리포에 빌드 도구는 두지 않는다.
+title: aiw — AI Workflow
+description: 어떤 AI 에이전트 도구를 쓰든 동일한 워크플로우 — @taeksoolee/ai-workflow 사용자 매뉴얼
+theme: jekyll-theme-primer
