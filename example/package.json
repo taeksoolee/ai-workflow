@@ -12,6 +12,6 @@
     "aiw:gitignore-check": "aiw gitignore --check"
   },
   "devDependencies": {
-    "@taeksoolee/ai-workflow": "workspace:*"
+    "@taeksoolee/ai-workflow": "^0.1.0"
   }
 }

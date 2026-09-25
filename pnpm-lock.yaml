@@ -11,7 +11,18 @@ importers:
   example:
     devDependencies:
       '@taeksoolee/ai-workflow':
-        specifier: workspace:*
-        version: link:..
+        specifier: ^0.1.0
+        version: 0.1.0
 
   manual: {}
+
+packages:
+
+  '@taeksoolee/ai-workflow@0.1.0':
+    resolution: {integrity: sha512-tcJIUrpYeSihhYB0ySSUgEEWJQgPrnSZMAnclFfRFVThICOXmguy/fG9afGt9R0dEIvbbuAZhKftJ2hJhqWytQ==}
+    engines: {node: '>=20'}
+    hasBin: true
+
+snapshots:
+
+  '@taeksoolee/ai-workflow@0.1.0': {}

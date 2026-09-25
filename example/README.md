@@ -1,7 +1,9 @@
-# example — aiw 사용 흐름 테스트
+# example — aiw 배포판 사용 흐름 테스트
 
-배포 후 사용 흐름을 리포 안에서 그대로 재현하는 샘플 프로젝트다.
-`@taeksoolee/ai-workflow` 를 `workspace:*` 로 참조하므로 루트에서 `pnpm install` 만 하면 `aiw` 를 쓸 수 있다.
+**npm 에 배포된 판**을 실제 소비자와 동일하게 설치해 사용 흐름을 재현하는 샘플 프로젝트다.
+`@taeksoolee/ai-workflow` 를 레지스트리 버전(`^0.1.0`)으로 참조한다 — workspace 링크가 아니므로
+여기서 실행되는 `aiw` 는 항상 **배포된 코드**다. (로컬 미배포 변경 검증은 `pnpm test` 의
+smoke/pack 테스트가 담당한다.)
 
 ## 테스트 절차
 
