@@ -22,7 +22,8 @@
     "example:init": "pnpm --dir example exec aiw init --yes",
     "example:setup": "pnpm --dir example exec aiw setup --yes",
     "example:mcp": "pnpm --dir example exec aiw mcp claude --dry-run",
-    "example:check": "pnpm --dir example exec aiw check"
+    "example:check": "pnpm --dir example exec aiw check",
+    "prepublishOnly": "pnpm test"
   },
   "keywords": [
     "ai",
@@ -32,5 +33,8 @@
     "mcp",
     "claude",
     "cursor"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
