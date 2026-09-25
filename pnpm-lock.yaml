@@ -11,18 +11,18 @@ importers:
   example:
     devDependencies:
       '@taeksoolee/ai-workflow':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.2.0
+        version: 0.2.0
 
   manual: {}
 
 packages:
 
-  '@taeksoolee/ai-workflow@0.1.1':
-    resolution: {integrity: sha512-uwxRFObroyVrLdunj+8/CColktXpMtmA58FXMXJnVqaweCxMJt4FbjV2uHi4PSlzmMs6uDWQRKjvg4EFIVghcw==}
+  '@taeksoolee/ai-workflow@0.2.0':
+    resolution: {integrity: sha512-qZi52HlvXLmC/Bh0K0CZmBvTQsQvqT0qAelmhRajBSTdUqJfqjUCoBhb4d5T5VKwhVm9rYegT1B2cR3qAVGWrg==}
     engines: {node: '>=20'}
     hasBin: true
 
 snapshots:
 
-  '@taeksoolee/ai-workflow@0.1.1': {}
+  '@taeksoolee/ai-workflow@0.2.0': {}
