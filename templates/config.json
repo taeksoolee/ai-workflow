@@ -1,0 +1,19 @@
+{
+  "baseBranch": "{{BASE_BRANCH}}",
+  "branchPrefixes": ["feature", "fix", "hotfix", "release", "chore", "refactor", "docs", "test"],
+  "commitFormat": "conventional",
+  "ignoreDerived": true,
+  "tools": [
+    "claude",
+    "cursor",
+    "kiro",
+    "copilot",
+    "opencode",
+    "codex",
+    "windsurf",
+    "continue",
+    "trae",
+    "antigravity",
+    "vscode"
+  ]
+}

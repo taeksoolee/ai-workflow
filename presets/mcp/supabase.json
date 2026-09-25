@@ -1,0 +1,18 @@
+{
+  "description": "Supabase 프로젝트 관리 (@supabase/mcp-server-supabase)",
+  "servers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${MCP_SUPABASE_ACCESS_TOKEN}"
+      }
+    }
+  },
+  "envVars": [
+    {
+      "key": "MCP_SUPABASE_ACCESS_TOKEN",
+      "comment": "https://supabase.com/dashboard/account/tokens"
+    }
+  ]
+}

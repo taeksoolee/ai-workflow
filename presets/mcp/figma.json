@@ -1,0 +1,18 @@
+{
+  "description": "Figma 시안 조회·이미지 export (figma-developer-mcp)",
+  "servers": {
+    "figma-developer-mcp": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--stdio"],
+      "env": {
+        "FIGMA_API_KEY": "${MCP_FIGMA_API_KEY}"
+      }
+    }
+  },
+  "envVars": [
+    {
+      "key": "MCP_FIGMA_API_KEY",
+      "comment": "https://www.figma.com/developers/api#access-tokens"
+    }
+  ]
+}

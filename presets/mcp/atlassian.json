@@ -1,0 +1,25 @@
+{
+  "description": "Jira + Confluence (mcp-atlassian, uvx 실행)",
+  "servers": {
+    "atlassian": {
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "env": {
+        "JIRA_URL": "${MCP_ATLASSIAN_JIRA_URL}",
+        "JIRA_USERNAME": "${MCP_ATLASSIAN_JIRA_USERNAME}",
+        "JIRA_API_TOKEN": "${MCP_ATLASSIAN_JIRA_API_TOKEN}",
+        "CONFLUENCE_URL": "${MCP_ATLASSIAN_CONFLUENCE_URL}",
+        "CONFLUENCE_USERNAME": "${MCP_ATLASSIAN_CONFLUENCE_USERNAME}",
+        "CONFLUENCE_API_TOKEN": "${MCP_ATLASSIAN_CONFLUENCE_API_TOKEN}"
+      }
+    }
+  },
+  "envVars": [
+    { "key": "MCP_ATLASSIAN_JIRA_URL", "comment": "예: https://your-domain.atlassian.net", "default": "https://your-domain.atlassian.net" },
+    { "key": "MCP_ATLASSIAN_JIRA_USERNAME", "comment": "Atlassian 계정 이메일", "default": "your@email.com" },
+    { "key": "MCP_ATLASSIAN_JIRA_API_TOKEN", "comment": "https://id.atlassian.com/manage-profile/security/api-tokens" },
+    { "key": "MCP_ATLASSIAN_CONFLUENCE_URL", "comment": "예: https://your-domain.atlassian.net/wiki", "default": "https://your-domain.atlassian.net/wiki" },
+    { "key": "MCP_ATLASSIAN_CONFLUENCE_USERNAME", "comment": "Atlassian 계정 이메일", "default": "your@email.com" },
+    { "key": "MCP_ATLASSIAN_CONFLUENCE_API_TOKEN", "comment": "Jira 와 동일 토큰 사용 가능" }
+  ]
+}

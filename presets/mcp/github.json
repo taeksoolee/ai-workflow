@@ -1,0 +1,17 @@
+{
+  "description": "GitHub 공식 원격 MCP (PR·이슈·레포 조회/조작)",
+  "servers": {
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${MCP_GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    }
+  },
+  "envVars": [
+    {
+      "key": "MCP_GITHUB_PERSONAL_ACCESS_TOKEN",
+      "comment": "https://github.com/settings/tokens — private 레포면 repo 권한 필요, org 는 SSO Authorize"
+    }
+  ]
+}

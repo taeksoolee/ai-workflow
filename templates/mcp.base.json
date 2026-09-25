@@ -1,0 +1,53 @@
+{
+  "mcpServers": {
+    "figma-developer-mcp": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--stdio"],
+      "env": {
+        "FIGMA_API_KEY": "${MCP_FIGMA_API_KEY}"
+      }
+    },
+    "atlassian": {
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "env": {
+        "JIRA_URL": "${MCP_ATLASSIAN_JIRA_URL}",
+        "JIRA_USERNAME": "${MCP_ATLASSIAN_JIRA_USERNAME}",
+        "JIRA_API_TOKEN": "${MCP_ATLASSIAN_JIRA_API_TOKEN}",
+        "CONFLUENCE_URL": "${MCP_ATLASSIAN_CONFLUENCE_URL}",
+        "CONFLUENCE_USERNAME": "${MCP_ATLASSIAN_CONFLUENCE_USERNAME}",
+        "CONFLUENCE_API_TOKEN": "${MCP_ATLASSIAN_CONFLUENCE_API_TOKEN}"
+      }
+    },
+    "sentry": {
+      "command": "npx",
+      "args": ["-y", "@sentry/mcp-server@latest"],
+      "env": {
+        "SENTRY_ACCESS_TOKEN": "${MCP_SENTRY_ACCESS_TOKEN}"
+      }
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "slack-mcp-server@latest", "--transport", "stdio"],
+      "env": {
+        "SLACK_MCP_XOXP_TOKEN": "${MCP_SLACK_XOXP_TOKEN}"
+      }
+    },
+    "slack-oauth": {
+      "url": "https://mcp.slack.com/mcp"
+    },
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${MCP_GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${MCP_SUPABASE_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Slack — stdio(커뮤니티 slack-mcp-server) / oauth(공식 원격) 두 모드. MCP_SLACK_MODE 로 하나만 활성화된다.",
+  "servers": {
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "slack-mcp-server@latest", "--transport", "stdio"],
+      "env": {
+        "SLACK_MCP_XOXP_TOKEN": "${MCP_SLACK_XOXP_TOKEN}"
+      }
+    },
+    "slack-oauth": {
+      "url": "https://mcp.slack.com/mcp"
+    }
+  },
+  "envVars": [
+    { "key": "MCP_SLACK_MODE", "comment": "stdio(기본) → slack 키 생성 / oauth → slack-oauth 키 생성", "default": "stdio" },
+    { "key": "MCP_SLACK_XOXP_TOKEN", "comment": "stdio 모드일 때만 — https://api.slack.com/apps 의 User OAuth Token (xoxp-...), Bot(xoxb) 아님" }
+  ]
+}
