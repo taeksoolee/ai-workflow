@@ -63,6 +63,7 @@ test('init 이 패키지에 동봉된 템플릿으로 스캐폴드를 만든다'
     '.ai-workflow/.env.example',
     '.ai-workflow/docs/base.md',
     '.ai-workflow/docs/start-task-guide.md',
+    '.ai-workflow/docs/init-ai-guide.md',
   ]) {
     assert.ok(fs.existsSync(path.join(consumerDir, relPath)), `${relPath} 이(가) 없습니다.`);
   }
@@ -75,6 +76,7 @@ test('setup 이 파생 파일을 생성한다', () => {
   assert.equal(result.status, 0, result.stderr);
   assert.ok(fs.existsSync(path.join(consumerDir, 'CLAUDE.md')));
   assert.ok(fs.existsSync(path.join(consumerDir, '.claude/skills/start-task/SKILL.md')));
+  assert.ok(fs.existsSync(path.join(consumerDir, '.claude/skills/init-ai/SKILL.md')));
 });
 
 test('mcp 가 .env 크리덴셜로 설정을 생성한다', () => {

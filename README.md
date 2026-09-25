@@ -27,7 +27,8 @@ Node.js >= 20 필요.
 
 ```bash
 aiw init                  # .ai-workflow/ 스캐폴드 + AI.md 생성, .gitignore 블록 적용
-# → .ai-workflow/.env 에 MCP 크리덴셜 채우기, AI.md 의 PROJECT 슬롯 채우기
+# → .ai-workflow/.env 에 MCP 크리덴셜 채우기
+# → AI.md 의 PROJECT 슬롯은 setup 후 아무 AI 도구에서 /init-ai 호출로 자동 작성 (또는 직접)
 aiw setup --yes           # 도구별 포인터 파일 + 스킬 래퍼 생성
 aiw mcp claude --dry-run  # MCP 설정 미리보기 → aiw mcp claude 로 실제 생성
 aiw check                 # 상태 점검

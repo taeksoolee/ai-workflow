@@ -59,6 +59,12 @@ drift 를 감지하면 갱신한다. 프로젝트 고유 규칙은 `AI.md` 에 �
 가이드 문서 상단 frontmatter 에 스킬을 선언하면 `aiw setup` 이 스캔해서 도구별 래퍼를 생성한다.
 별도 JSON 매니페스트는 없다 — 가이드 문서가 곧 선언이다.
 
+`aiw init` 이 스켈레톤 3종을 복사해 준다 (프로젝트 소유 — 자유롭게 수정):
+
+- `init-ai-guide.md` — **`/init-ai`**: 프로젝트를 분석해 AI.md 슬롯을 채우거나 문서를 재점검
+- `start-task-guide.md` — `/start-task`: 이슈 분석 + 브랜치 생성
+- `pr-review-guide.md` — `/pr-review`: PR 리뷰 절차
+
 ```markdown
 ---
 skill:

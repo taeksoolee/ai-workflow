@@ -50,6 +50,7 @@ test('aiw init --yes 가 .ai-workflow 스캐폴드와 AI.md 를 생성한다', (
     '.ai-workflow/.env.example',
     '.ai-workflow/.env',
     '.ai-workflow/docs/base.md',
+    '.ai-workflow/docs/init-ai-guide.md',
     '.ai-workflow/docs/start-task-guide.md',
     '.ai-workflow/docs/pr-review-guide.md',
     '.ai-workflow/logs/.gitkeep',
@@ -114,9 +115,11 @@ test('aiw setup --yes 가 포인터 파일과 스킬 래퍼를 생성한다', ()
   assert.match(readProject('CLAUDE.md'), /AI\.md/);
   assert.match(readProject('CLAUDE.md'), /\.ai-workflow\/docs\/base\.md/);
 
-  // 스킬 래퍼 — frontmatter 스캔 결과 (start-task, pr-review / 둘 다 command 타입)
+  // 스킬 래퍼 — frontmatter 스캔 결과 (init-ai, start-task, pr-review / 모두 command 타입)
   for (const wrapper of [
     '.claude/skills/start-task/SKILL.md',
+    '.claude/skills/init-ai/SKILL.md',
+    '.cursor/commands/init-ai.md',
     '.claude/skills/pr-review/SKILL.md',
     '.cursor/commands/start-task.md',
     '.github/prompts/pr-review.prompt.md',

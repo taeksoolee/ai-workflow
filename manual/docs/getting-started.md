@@ -34,7 +34,9 @@ aiw init --base-branch develop   # 베이스 브랜치가 main 이 아니면
 init 직후 할 일:
 
 1. `.ai-workflow/.env` 에 MCP 크리덴셜 값을 채운다 (파일은 권한 600, 절대 커밋 금지).
-2. `AI.md` 의 `<!-- PROJECT: ... -->` 슬롯을 프로젝트에 맞게 채운다.
+2. `AI.md` 의 `<!-- PROJECT: ... -->` 슬롯을 채운다 — 직접 써도 되지만, `aiw setup` 후
+   아무 AI 도구에서 **`/init-ai`** 를 호출하면 에이전트가 프로젝트를 분석해 초안을 제안하고
+   승인받아 채워준다 (이미 채워진 프로젝트에서는 문서 vs 실제 상태 재점검으로 동작).
 3. `.ai-workflow/config.json` 에서 `baseBranch`, `tools` 등을 조정한다.
 4. `.ai-workflow/` 의 SSoT 파일들과 `AI.md`, `.gitignore` 변경을 **커밋한다**.
 

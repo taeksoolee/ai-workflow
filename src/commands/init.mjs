@@ -76,7 +76,7 @@ export const run = async argv => {
     renderTemplate(readTemplate(path.join('docs', 'base.md')), vars),
     { label: '공통 규칙 (패키지 관리 파일)', yes },
   );
-  for (const guide of ['start-task-guide.md', 'pr-review-guide.md']) {
+  for (const guide of ['init-ai-guide.md', 'start-task-guide.md', 'pr-review-guide.md']) {
     await writeWithConfirm(
       path.join(root, AIW_DIR, 'docs', guide),
       renderTemplate(readTemplate(path.join('docs', guide)), vars),
@@ -98,8 +98,8 @@ export const run = async argv => {
   console.log('');
   ok('init 완료. 다음 단계:');
   console.log(`   1. ${path.join(AIW_DIR, '.env')} 에 MCP 크리덴셜을 채운다`);
-  console.log('   2. AI.md 의 PROJECT 슬롯을 프로젝트에 맞게 채운다');
-  console.log('   3. aiw setup 으로 도구별 포인터/스킬 래퍼를 생성한다');
+  console.log('   2. aiw setup 으로 도구별 포인터/스킬 래퍼를 생성한다');
+  console.log('   3. 아무 AI 도구에서 /init-ai 를 호출해 AI.md 의 PROJECT 슬롯을 채운다 (또는 직접 작성)');
   console.log('   4. aiw mcp <도구|all> 로 MCP 설정을 생성한다');
 };
 
